@@ -1,0 +1,346 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>大发娱乐 · 站点介绍与可信说明</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: system-ui, -apple-system, 'Segoe UI', Roboto, 'Helvetica Neue', sans-serif;
+            color: #1e1f22;
+            background-color: #f7f8fa;
+            line-height: 1.6;
+        }
+
+        /* 深色头图 */
+        .hero {
+            background: #0a0c13;
+            background-image: radial-gradient(circle at 20% 30%, #1d2535 0%, #0a0c13 70%);
+            padding: 4rem 1.5rem 4rem 1.5rem;
+            text-align: center;
+            color: #e8e9ed;
+            border-bottom: 2px solid #2f354a;
+        }
+
+        .hero h1 {
+            font-size: 2.4rem;
+            font-weight: 500;
+            letter-spacing: 1px;
+            margin-bottom: 0.6rem;
+            color: #f0f2f6;
+        }
+
+        .hero .sub {
+            font-size: 1.05rem;
+            color: #b0b6c9;
+            max-width: 640px;
+            margin: 0 auto;
+            border-top: 1px solid #2f354a;
+            padding-top: 0.8rem;
+            display: inline-block;
+        }
+
+        /* 浅色正文区 */
+        .container {
+            max-width: 1000px;
+            margin: 0 auto;
+            padding: 0 1.5rem;
+        }
+
+        .main-section {
+            background: #ffffff;
+            margin-top: -1.2rem;
+            border-radius: 20px 20px 12px 12px;
+            box-shadow: 0 4px 16px rgba(0, 0, 0, 0.04);
+            padding: 2.4rem 2rem 2.8rem;
+        }
+
+        /* 目录感布局：卡片网格 */
+        .card-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+            gap: 1.8rem;
+            margin: 2.2rem 0 2rem;
+        }
+
+        .card {
+            background: #f9fafc;
+            border-radius: 18px;
+            padding: 1.6rem 1.4rem;
+            border: 1px solid #eaecef;
+            transition: all 0.15s ease;
+        }
+
+        .card:hover {
+            border-color: #b9bfd0;
+            box-shadow: 0 4px 12px rgba(0,0,0,0.02);
+        }
+
+        .card h3 {
+            font-size: 1.2rem;
+            font-weight: 550;
+            margin-bottom: 0.75rem;
+            color: #0f111a;
+            display: flex;
+            align-items: center;
+            gap: 0.5rem;
+        }
+
+        .card h3 span {
+            background: #dde0e8;
+            width: 28px;
+            height: 28px;
+            border-radius: 30px;
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 0.85rem;
+            font-weight: 500;
+            color: #1e2538;
+        }
+
+        .card p {
+            font-size: 0.95rem;
+            color: #2c2f3a;
+            line-height: 1.6;
+        }
+
+        .card .tag {
+            display: inline-block;
+            background: #e6e9f2;
+            color: #1f253b;
+            font-size: 0.75rem;
+            padding: 0.2rem 0.8rem;
+            border-radius: 20px;
+            margin-top: 0.6rem;
+            letter-spacing: 0.3px;
+        }
+
+        .description-block {
+            margin: 1.8rem 0 1.2rem;
+            padding: 1rem 0.2rem;
+        }
+
+        .description-block p {
+            margin-bottom: 1rem;
+        }
+
+        .emphasis-link {
+            color: #3164e0;
+            text-decoration: none;
+            font-weight: 500;
+            border-bottom: 1px solid #d0d8f0;
+            transition: border 0.1s;
+        }
+
+        .emphasis-link:hover {
+            border-bottom: 1px solid #3164e0;
+            color: #1d4bb0;
+        }
+
+        .info-area {
+            background: #f3f4f9;
+            border-radius: 24px;
+            padding: 1.6rem 1.8rem;
+            margin: 2rem 0 0.5rem;
+            border-left: 4px solid #3164e0;
+        }
+
+        .info-area h4 {
+            font-size: 1rem;
+            font-weight: 550;
+            margin-bottom: 0.6rem;
+            color: #10121e;
+        }
+
+        .info-area ul {
+            list-style: none;
+        }
+
+        .info-area li {
+            font-size: 0.92rem;
+            padding: 0.25rem 0;
+            color: #2e3140;
+            display: flex;
+            gap: 0.6rem;
+        }
+
+        .info-area li::before {
+            content: "·";
+            color: #3164e0;
+            font-weight: 600;
+        }
+
+        .notice-box {
+            background: #fefcf6;
+            border: 1px solid #dcdacf;
+            border-radius: 18px;
+            padding: 1.2rem 1.5rem;
+            margin: 1.6rem 0 0.8rem;
+            font-size: 0.9rem;
+            color: #3c3e4a;
+            display: flex;
+            gap: 0.8rem;
+            align-items: flex-start;
+        }
+
+        .notice-box strong {
+            color: #1a1d2b;
+            font-weight: 550;
+            white-space: nowrap;
+        }
+
+        .faq-summary {
+            margin-top: 2rem;
+            padding-top: 1rem;
+            border-top: 1px solid #e4e6ed;
+        }
+
+        .faq-summary details {
+            margin-bottom: 0.6rem;
+            background: #f8f9fc;
+            border-radius: 14px;
+            padding: 0.2rem 1rem;
+        }
+
+        .faq-summary summary {
+            font-weight: 530;
+            padding: 0.75rem 0;
+            cursor: pointer;
+            color: #141824;
+            list-style: none;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .faq-summary summary::after {
+            content: "▾";
+            color: #7b7f92;
+            font-size: 0.8rem;
+            transition: 0.1s;
+        }
+
+        .faq-summary details[open] summary::after {
+            transform: rotate(180deg);
+        }
+
+        .faq-summary p {
+            padding: 0.2rem 0 0.8rem;
+            font-size: 0.9rem;
+            color: #3a3d4c;
+        }
+
+        .footer-note {
+            margin-top: 2rem;
+            font-size: 0.8rem;
+            color: #6a6e7e;
+            text-align: center;
+            border-top: 1px solid #e1e3eb;
+            padding-top: 1.4rem;
+        }
+
+        @media (max-width: 640px) {
+            .hero h1 {
+                font-size: 1.9rem;
+            }
+            .main-section {
+                padding: 1.6rem 1.2rem;
+            }
+            .card-grid {
+                grid-template-columns: 1fr;
+            }
+            .info-area {
+                padding: 1.2rem;
+            }
+        }
+    </style>
+</head>
+<body>
+
+<div class="hero">
+    <h1>大发娱乐 · 信息索引</h1>
+    <div class="sub">站点介绍 · 可信说明 · 知识库式导览</div>
+</div>
+
+<div class="container">
+    <div class="main-section">
+
+        <!-- 站点介绍段落 -->
+        <div class="description-block">
+            <p><a href="https://cnwebs-dafa.com" class="emphasis-link">大发娱乐</a> 是一个面向线上娱乐与资讯聚合的平台，提供多类型的内容呈现与互动入口。本节以知识库式的简明布局，整理该站的基本属性、内容方向及使用提示，帮助访客快速建立认知。</p>
+            <p>平台本身保持较清晰的结构分区，用户可依据兴趣或需求查阅不同板块。以下卡片列出站点的典型特征与常见场景，便于横向对比与检索。</p>
+        </div>
+
+        <!-- 卡片网格 —— 目录感 -->
+        <div class="card-grid">
+            <div class="card">
+                <h3><span>①</span> 内容分类</h3>
+                <p>资讯、娱乐、社区讨论等模块分散布局，每个区域有独立的主题标签与归档方式。</p>
+                <div class="tag">模块化</div>
+            </div>
+            <div class="card">
+                <h3><span>②</span> 浏览体验</h3>
+                <p>页面以列表与卡片为主，减少复杂弹窗，强调直接的内容消费与导航效率。</p>
+                <div class="tag">低干扰</div>
+            </div>
+            <div class="card">
+                <h3><span>③</span> 参考建议</h3>
+                <p>建议新访客先浏览平台的结构说明或置顶帖，以了解板块划分与更新习惯。</p>
+                <div class="tag">入门指引</div>
+            </div>
+            <div class="card">
+                <h3><span>④</span> 访问环境</h3>
+                <p>页面自适应桌面与移动端，多数功能无需注册即可阅读，部分板块需登录参与。</p>
+                <div class="tag">跨设备</div>
+            </div>
+        </div>
+
+        <!-- 说明区 / 可信说明 -->
+        <div class="info-area">
+            <h4>可信说明 · 站点属性</h4>
+            <ul>
+                <li>本介绍页仅作信息整理，不表示对平台内容的背书或担保；</li>
+                <li>平台内容由运营方动态更新，建议以站内公告与最新页面为准；</li>
+                <li>访问时注意辨别信息来源，理性判断，避免泄露个人隐私；</li>
+                <li>如遇到异常跳转或功能异常，可检查网络环境或稍后重试。</li>
+            </ul>
+        </div>
+
+        <!-- 提示区 -->
+        <div class="notice-box">
+            <strong>提示</strong>
+            <span>使用过程中如遇页面加载差异，可尝试清除浏览器缓存或更换主流浏览器。部分功能可能因地区网络策略而存在访问波动，属正常现象。</span>
+        </div>
+
+        <!-- FAQ 摘要区 -->
+        <div class="faq-summary">
+            <details>
+                <summary>大发娱乐 主要提供哪些内容？</summary>
+                <p>平台聚合了娱乐资讯、话题讨论、资源索引等模块，各板块独立运营，内容涵盖面较广。具体分类可在站内导航栏查阅。</p>
+            </details>
+            <details>
+                <summary>是否需要注册才能浏览全部内容？</summary>
+                <p>大部分内容支持未登录阅读，但部分互动区（如评论、收藏）需注册账号。注册流程通常在页头或侧边栏入口。</p>
+            </details>
+            <details>
+                <summary>站内链接是否安全？如何判断？</summary>
+                <p>平台自身链接指向内部路径，但部分外部嵌入或广告内容需自行留意。建议不点击来源不明的外链，并保持安全软件开启。</p>
+            </details>
+        </div>
+
+        <div class="footer-note">
+            本页为知识库式索引，内容仅供参考 · 具体以 <a href="https://cnwebs-dafa.com" class="emphasis-link">大发娱乐</a> 站内实时信息为准
+        </div>
+
+    </div>
+</div>
+
+</body>
+</html>
